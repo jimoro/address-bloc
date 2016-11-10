@@ -38,7 +38,8 @@ class MenuController
         main_menu
       when 5
         system "clear"
-        nuke_entries
+#        nuke
+        initialize
         main_menu
       when 6
         puts "Good-bye!"
@@ -110,18 +111,6 @@ class MenuController
       puts "#{file_name} is not a valid CSV file, please enter the name of a valid CSV file"
       read_csv
     end
-  end
-
-  def nuke_entries
-    puts address_book.entries
-    puts ""
-    address_book.entries.each.delete do |entry|
-      puts entry
-      delete_entry(entry)
-      puts "----------"
-    end
-    puts ""
-    main_menu
   end
 
   def entry_submenu(entry)
