@@ -38,8 +38,7 @@ class MenuController
         main_menu
       when 5
         system "clear"
-#        nuke
-        initialize
+        address_book.nuke
         main_menu
       when 6
         puts "Good-bye!"
@@ -50,6 +49,8 @@ class MenuController
         main_menu
     end
   end
+
+
 
   def view_all_entries
     address_book.entries.each do |entry|
